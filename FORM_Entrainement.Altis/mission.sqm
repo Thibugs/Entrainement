@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1081;
+		nextID=1120;
 	};
 	class Camera
 	{
-		pos[]={15062.421,19.312935,17299.92};
-		dir[]={-0.43550941,-0.49335468,-0.75294936};
-		up[]={-0.24701497,0.86982822,-0.42706257};
-		aside[]={-0.86562991,0,0.50068438};
+		pos[]={15077.53,27.52972,17286.904};
+		dir[]={-0.045056429,-0.56564915,0.82346231};
+		up[]={-0.030907165,0.82463044,0.56481981};
+		aside[]={0.99854535,-3.8220605e-007,0.054636903};
 	};
 };
 binarizationWanted=0;
@@ -85,14 +85,13 @@ addons[]=
 	"A3_Structures_F_Exp_Walls_Net",
 	"A3_Structures_F_Exp_Military_Fortifications",
 	"A3_Structures_F_Mil_Helipads",
-	"A3_Structures_F_Argo_Decals_Horizontal",
-	"A3_Characters_F_Mark"
+	"A3_Structures_F_Argo_Decals_Horizontal"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=35;
+		items=34;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -320,13 +319,6 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item34
-		{
-			className="A3_Characters_F_Mark";
-			name="Arma 3 Marksmen - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
 	};
 };
 dlcs[]=
@@ -447,7 +439,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=4;
+		items=2;
 		class Item0
 		{
 			dataType="Layer";
@@ -20782,9 +20774,10 @@ class Mission
 				{
 					dataType="Layer";
 					name="Medical";
+					state=1;
 					class Entities
 					{
-						items=3;
+						items=4;
 						class Item0
 						{
 							dataType="Layer";
@@ -21027,13 +21020,31 @@ class Mission
 							type="Land_Laptop_03_black_F";
 							atlOffset=0.00039100647;
 						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15060.914,18.347033,17297.684};
+								angles[]={0.0026529003,0.79415971,0.0013439035};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								name="medical_arsenal";
+							};
+							id=3132;
+							type="Land_PaperBox_01_small_closed_white_med_F";
+							atlOffset=0.00039672852;
+						};
 					};
 					id=3106;
-					atlOffset=0.40955925;
+					atlOffset=0.61337662;
 				};
 			};
 			id=105;
-			atlOffset=-0.71885872;
+			atlOffset=-0.61620903;
 		};
 		class Item1
 		{
@@ -24734,55 +24745,6 @@ class Mission
 			};
 			id=2914;
 			atlOffset=-0.38181877;
-		};
-		class Item2
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={15066.438,17.336798,17296.26};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						isPlayer=1;
-					};
-					id=3124;
-					type="B_HeavyGunner_F";
-					atlOffset=1.9073486e-006;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=3123;
-			atlOffset=1.9073486e-006;
-		};
-		class Item3
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={15060.914,18.347033,17297.684};
-				angles[]={0.0026529003,0.79415971,0.0013439035};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				name="medical_arsenal";
-			};
-			id=3132;
-			type="Land_PaperBox_01_small_closed_white_med_F";
-			atlOffset=0.00039672852;
 		};
 	};
 };
