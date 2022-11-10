@@ -18,6 +18,11 @@ class cfgfunctions {
         class CCOM_PO {
             class CCOM_initPO {};
         };
+        class MEDICAL {
+            class MEDICAL_init {};
+            class removePatient {};
+            class selectInjuriePosition {};
+        };
     };
 };
 

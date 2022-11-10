@@ -4,6 +4,8 @@ private _lockers = nearestObjects [position quartiers, ["plp_ct_LockerBig"], 50,
     [_x] call GSRI_fnc_setAsLocker;
 } forEach _lockers;
 
+[medical_arsenal] call GSRI_fnc_setAsLocker;
+
 [cqb_arsenal] call GSRI_fnc_setAsLocker;
 
 private _actionStartCQB1 = [
@@ -25,8 +27,26 @@ private _actionEndCQB1 = [
     {}
 ] call ace_interact_menu_fnc_createAction;
 
+private _actionStartMedical = [
+    "startMedical",
+    localize "GSRI_Entrainement_Medical_start",
+    "\a3\ui_f\data\igui\cfg\simpletasks\types\Heal_ca.paa",
+    {[] remoteExec ["GSRI_fnc_MEDICAL_init", 2]},
+    {true == true}
+] call ace_interact_menu_fnc_createAction;
+
+private _actionEndMedical = [
+    "endMedical",
+    localize "GSRI_Entrainement_Medical_end",
+    "\a3\ui_f\data\igui\cfg\simpletasks\types\destroy_ca.paa",
+    {[] remoteExec ["GSRI_fnc_removePatient", 2]},
+    {true == true}
+] call ace_interact_menu_fnc_createAction;
+
 [controle_cqb1, 0, ["ACE_MainActions"], _actionStartCQB1] call ace_interact_menu_fnc_addActionToObject;
 [controle_cqb1, 0, ["ACE_MainActions"], _actionEndCQB1] call ace_interact_menu_fnc_addActionToObject;
+[controle_medical, 0, ["ACE_MainActions"], _actionStartMedical] call ace_interact_menu_fnc_addActionToObject;
+[controle_medical, 0, ["ACE_MainActions"], _actionEndMedical] call ace_interact_menu_fnc_addActionToObject;
 
 // First CQB1 camera call + action to debug it if needed.
 [] call GSRI_fnc_CQB1_camInit;

@@ -31,5 +31,20 @@
             <English>Course has been disabled, now safe to go through.</English>
             <French>Parcours désactivé, traversée possible.</French>
         </Key>
+        <Key ID="GSRI_Entrainement_Medical_start">
+            <Original>Spawn a patient.</Original>
+            <English>Spawn a patient.</English>
+            <French>Faire apparaitre un patient</French>
+        </Key>
+        <Key ID="GSRI_Entrainement_Medical_patient_died">
+            <Original>The patient died of his wound.</Original>
+            <English>The patient died of his wound.</English>
+            <French>Le patient est mort de ses blessures</French>
+        </Key>
+        <Key ID="GSRI_Entrainement_Medical_end">
+            <Original>Remove the patient.</Original>
+            <English>Remove the patient.</English>
+            <French>Faire partir le patient</French>
+        </Key>
     </Package>
 </Project>
