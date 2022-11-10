@@ -16,6 +16,4 @@ _injuredSoldier addEventHandler ["Killed", {
 	if(player distance pile_medical < 5) then {
 		["TaskFailed", ["", localize "GSRI_Entrainement_Medical_patient_died"]] call BIS_fnc_showNotification;
 	};
-	
-	_removeDeadSoldier = [] spawn {sleep 5; call GSRI_fnc_removePatient};	
 }];
